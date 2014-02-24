@@ -39,7 +39,7 @@
         [self removeObjectForKey:key];
         [self.expiringDates removeObjectForKey:key];
     }
-    
+
     return [super objectForKey:key];
 }
 
@@ -48,6 +48,45 @@
     self.expiringDates[key] = [NSDate dateWithTimeIntervalSinceNow:self.expireDuration];
     
     [super setObject:obj forKey:key];
+}
+
+#pragma mark - New Api
+
+- (id)fetch:(id)key generateOnMiss:(id (^)(void))handler;
+{
+    id result;
+    
+    @synchronized(self)
+    {
+        result = self[key];
+        
+        if (result) {
+            return result;
+        }
+        
+        result = handler();
+        self[key] = result;
+    }
+    
+    return result;
+}
+
+- (void)fetch:(id)key generateOnMissAsync:(void (^)(ELAResultCallback))handler result:(ELAFetchCallback)fetchCallback;
+{
+    @synchronized(self)
+    {
+        id result = self[key];
+        
+        if (result) {
+            fetchCallback(result);
+        }else{
+            handler(^(id generatedResult){
+                self[key] = generatedResult;
+                fetchCallback(generatedResult);
+            });
+        }
+    }
+    
 }
 
 #pragma mark - Keyed Subscripting

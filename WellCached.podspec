@@ -7,12 +7,12 @@
 Pod::Spec.new do |s|
   s.name             = "WellCached"
   s.version          = "0.1.0"
-  s.summary          = "A short description of WellCached."
+  s.summary          = "An expiring, thread-safe caching library based on NSCache"
   s.description      = <<-DESC
-                       An optional longer description of WellCached
-
-                       * Markdown format.
-                       * Don't worry about the indent, we strip it!
+                        WellCached provides a simple NSDictionary-like interface for caching, allowing
+                        you to automatically expire cached items after a specific period. You can set the expiring
+                        duration on a case-by-case basis. You can also set a race-condition-ttl to prevent cache misses
+                        across threads on the same key to all attempt to generate new data.
                        DESC
   s.homepage         = "http://github.com/ericallam/WellCached"
   s.license          = 'MIT'
