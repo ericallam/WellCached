@@ -116,7 +116,7 @@ There is a different method you should use for a situation like this. In this ex
 }
 ```
 
-Both the synchronous and asynchronous `fetch` methods as variants that allow you to pass in custom expiration durations.
+Both the synchronous and asynchronous `fetch` methods have variants that allow you to pass in custom expiration durations.
 
 ## Tests
 
