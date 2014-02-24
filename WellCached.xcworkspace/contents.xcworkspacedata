@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <Group
+      location = "group:WellCached"
+      name = "WellCached">
+      <FileRef
+         location = "group:ELAWellCached.h">
+      </FileRef>
+      <FileRef
+         location = "group:ELAWellCached.m">
+      </FileRef>
+   </Group>
+   <FileRef
+      location = "group:Tests/WellCached Tests.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Tests/Pods/Pods.xcodeproj">
+   </FileRef>
+</Workspace>

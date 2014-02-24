@@ -1,0 +1,14 @@
+PODS:
+  - WellCached (0.1.0)
+
+DEPENDENCIES:
+  - WellCached (from `../`)
+
+EXTERNAL SOURCES:
+  WellCached:
+    :path: ../
+
+SPEC CHECKSUMS:
+  WellCached: 73392f73a4d349aae74b90a88917fd1771c817b2
+
+COCOAPODS: 0.29.0

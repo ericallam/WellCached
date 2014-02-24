@@ -1,0 +1,5 @@
+xcodeproj 'WellCached Tests'
+workspace '../WellCached'
+inhibit_all_warnings!
+
+pod 'WellCached', :path => '../'

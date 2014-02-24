@@ -1,0 +1,363 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		070B66DA18BA9BC5002C7F6C /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 070B66D918BA9BC5002C7F6C /* XCTest.framework */; };
+		070B66DB18BA9BC5002C7F6C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 070B66C018BA9BC5002C7F6C /* Foundation.framework */; };
+		070B66DC18BA9BC5002C7F6C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 070B66C418BA9BC5002C7F6C /* UIKit.framework */; };
+		070B66E618BA9BC5002C7F6C /* WellCachedTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 070B66E518BA9BC5002C7F6C /* WellCachedTests.m */; };
+		5B0733EB6C3F4FC09412EA03 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E70AD3A1E94D427A88198F6D /* libPods.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		07112B2118BAA4BB00F4E05F /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 7;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		070B66C018BA9BC5002C7F6C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		070B66C218BA9BC5002C7F6C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		070B66C418BA9BC5002C7F6C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		070B66D818BA9BC5002C7F6C /* WellCachedTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WellCachedTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		070B66D918BA9BC5002C7F6C /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		070B66E118BA9BC5002C7F6C /* WellCachedTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "WellCachedTests-Info.plist"; sourceTree = "<group>"; };
+		070B66E318BA9BC5002C7F6C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		070B66E518BA9BC5002C7F6C /* WellCachedTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = WellCachedTests.m; path = /Users/eric/code/Pods/WellCached/Tests/WellCachedTests.m; sourceTree = "<absolute>"; };
+		070B66EF18BA9F89002C7F6C /* libPods-WellCached.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-WellCached.a"; path = "Pods/build/Debug-iphoneos/libPods-WellCached.a"; sourceTree = "<group>"; };
+		192FDB9F04414B18A095DCA2 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		E70AD3A1E94D427A88198F6D /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		070B66D518BA9BC5002C7F6C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				070B66DA18BA9BC5002C7F6C /* XCTest.framework in Frameworks */,
+				070B66DC18BA9BC5002C7F6C /* UIKit.framework in Frameworks */,
+				070B66DB18BA9BC5002C7F6C /* Foundation.framework in Frameworks */,
+				5B0733EB6C3F4FC09412EA03 /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		070B66B418BA9BC5002C7F6C = {
+			isa = PBXGroup;
+			children = (
+				070B66DF18BA9BC5002C7F6C /* Tests */,
+				070B66BF18BA9BC5002C7F6C /* Frameworks */,
+				070B66BE18BA9BC5002C7F6C /* Products */,
+				192FDB9F04414B18A095DCA2 /* Pods.xcconfig */,
+			);
+			sourceTree = "<group>";
+		};
+		070B66BE18BA9BC5002C7F6C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				070B66D818BA9BC5002C7F6C /* WellCachedTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		070B66BF18BA9BC5002C7F6C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				070B66EF18BA9F89002C7F6C /* libPods-WellCached.a */,
+				070B66C018BA9BC5002C7F6C /* Foundation.framework */,
+				070B66C218BA9BC5002C7F6C /* CoreGraphics.framework */,
+				070B66C418BA9BC5002C7F6C /* UIKit.framework */,
+				070B66D918BA9BC5002C7F6C /* XCTest.framework */,
+				E70AD3A1E94D427A88198F6D /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		070B66DF18BA9BC5002C7F6C /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				070B66E518BA9BC5002C7F6C /* WellCachedTests.m */,
+				070B66E018BA9BC5002C7F6C /* Supporting Files */,
+			);
+			name = Tests;
+			path = /Users/eric/code/Pods/WellCached/Tests;
+			sourceTree = "<absolute>";
+		};
+		070B66E018BA9BC5002C7F6C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				070B66E118BA9BC5002C7F6C /* WellCachedTests-Info.plist */,
+				070B66E218BA9BC5002C7F6C /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		070B66D718BA9BC5002C7F6C /* WellCachedTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 070B66EC18BA9BC5002C7F6C /* Build configuration list for PBXNativeTarget "WellCachedTests" */;
+			buildPhases = (
+				D7BE5BC88CE34B57B1956FAC /* Check Pods Manifest.lock */,
+				070B66D418BA9BC5002C7F6C /* Sources */,
+				070B66D518BA9BC5002C7F6C /* Frameworks */,
+				070B66D618BA9BC5002C7F6C /* Resources */,
+				E55C5F54AB194853B6CE631C /* Copy Pods Resources */,
+				07112B2118BAA4BB00F4E05F /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WellCachedTests;
+			productName = WellCachedTests;
+			productReference = 070B66D818BA9BC5002C7F6C /* WellCachedTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		070B66B518BA9BC5002C7F6C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = ELA;
+				LastUpgradeCheck = 0510;
+				TargetAttributes = {
+					070B66D718BA9BC5002C7F6C = {
+						TestTargetID = 070B66BC18BA9BC5002C7F6C;
+					};
+				};
+			};
+			buildConfigurationList = 070B66B818BA9BC5002C7F6C /* Build configuration list for PBXProject "WellCached Tests" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 070B66B418BA9BC5002C7F6C;
+			productRefGroup = 070B66BE18BA9BC5002C7F6C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				070B66D718BA9BC5002C7F6C /* WellCachedTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		070B66D618BA9BC5002C7F6C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		D7BE5BC88CE34B57B1956FAC /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E55C5F54AB194853B6CE631C /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		070B66D418BA9BC5002C7F6C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				070B66E618BA9BC5002C7F6C /* WellCachedTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		070B66E218BA9BC5002C7F6C /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				070B66E318BA9BC5002C7F6C /* en */,
+			);
+			name = InfoPlist.strings;
+			path = ../WellCached;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		070B66E718BA9BC5002C7F6C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		070B66E818BA9BC5002C7F6C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		070B66ED18BA9BC5002C7F6C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 192FDB9F04414B18A095DCA2 /* Pods.xcconfig */;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "WellCached-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "WellCachedTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		070B66EE18BA9BC5002C7F6C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 192FDB9F04414B18A095DCA2 /* Pods.xcconfig */;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "WellCached-Prefix.pch";
+				INFOPLIST_FILE = "WellCachedTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		070B66B818BA9BC5002C7F6C /* Build configuration list for PBXProject "WellCached Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				070B66E718BA9BC5002C7F6C /* Debug */,
+				070B66E818BA9BC5002C7F6C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		070B66EC18BA9BC5002C7F6C /* Build configuration list for PBXNativeTarget "WellCachedTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				070B66ED18BA9BC5002C7F6C /* Debug */,
+				070B66EE18BA9BC5002C7F6C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 070B66B518BA9BC5002C7F6C /* Project object */;
+}
