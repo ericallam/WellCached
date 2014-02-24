@@ -5,9 +5,13 @@
 
 ## Usage
 
-To run the example project; clone the repo, and run `pod install` from the Project directory first.
+## Tests
+
+To run the tests; clone the repo, and run `rake test` from the root directory or open the "WellCache.xcworkspace" and run the Test target using `⌘U`
 
 ## Requirements
+
+No dependencies other than Foundation
 
 ## Installation
 
@@ -18,7 +22,7 @@ it simply add the following line to your Podfile:
 
 ## Author
 
-Eric Allam, rubymaverick@gmail.com
+Eric Allam, eallam@gmail.com
 
 ## License
 
