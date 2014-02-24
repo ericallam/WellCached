@@ -122,6 +122,14 @@ Both the synchronous and asynchronous `fetch` methods have variants that allow y
 
 To run the tests; clone the repo, and run `rake test` from the root directory or open the "WellCache.xcworkspace" and run the Test target using `⌘U`
 
+## Example
+
+Most of the time, [NSURLCache](http://nshipster.com/nsurlcache/) is all you'll need for caching expensive operations, but there are a couple common instances where you don't have much control over the networking stack that's fetching the data, such as using a third-party API library that talks to their own server, or for example the Apple-supplied Directions API. 
+
+So the example project in `Examples/WalkingDirections` makes use of `WellCached` to fetch and store the result of walking directions for each location in the table view.
+
+**TODO** Build example and insert GIF here
+
 ## Requirements
 
 No dependencies other than Foundation
@@ -132,6 +140,12 @@ WellCached is available through [CocoaPods](http://cocoapods.org), to install
 it simply add the following line to your Podfile:
 
     pod "WellCached"
+
+Import the `ELAWellCached` header like this:
+
+```objc
+#import <WellCached/ELAWellCached.h>
+```
 
 ## Author
 
