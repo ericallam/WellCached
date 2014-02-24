@@ -147,6 +147,10 @@ Import the `ELAWellCached` header like this:
 #import <WellCached/ELAWellCached.h>
 ```
 
+## Roadmap
+
+I intend to keep improving the thread-safetyness of this class and expand it's Unit and Integration tests, as well as ship in an actual app that I am working on, before cutting a version 1.0. The public API could change at any time between now and 1.0.  At 1.0 the API will considered stabilized and Semantic Versioning will be followed.
+
 ## Author
 
 Eric Allam, eallam@gmail.com
@@ -154,4 +158,10 @@ Eric Allam, eallam@gmail.com
 ## License
 
 WellCached is available under the MIT license. See the LICENSE file for more info.
+
+## Contributing
+
+If you would like to contribute to this project, please fork this repo and create pull requests (on a branch, not master).
+
+Make sure any code you write is backed by a Unit test.  Check out the `Tests/WellCachedTests.m` file for the exist tests. 
 
