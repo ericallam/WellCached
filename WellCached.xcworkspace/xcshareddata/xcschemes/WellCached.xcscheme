@@ -7,17 +7,17 @@
       buildImplicitDependencies = "YES">
       <BuildActionEntries>
          <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
+            buildForTesting = "NO"
+            buildForRunning = "NO"
             buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
+            buildForArchiving = "NO"
+            buildForAnalyzing = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "070B66BC18BA9BC5002C7F6C"
                BuildableName = "WellCached.app"
                BlueprintName = "WellCached"
-               ReferencedContainer = "container:WellCached Tests.xcodeproj">
+               ReferencedContainer = "container:Tests/WellCached Tests.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -35,19 +35,10 @@
                BlueprintIdentifier = "070B66D718BA9BC5002C7F6C"
                BuildableName = "WellCachedTests.xctest"
                BlueprintName = "WellCachedTests"
-               ReferencedContainer = "container:WellCached Tests.xcodeproj">
+               ReferencedContainer = "container:Tests/WellCached Tests.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "070B66BC18BA9BC5002C7F6C"
-            BuildableName = "WellCached.app"
-            BlueprintName = "WellCached"
-            ReferencedContainer = "container:WellCached Tests.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
    </TestAction>
    <LaunchAction
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
@@ -58,15 +49,6 @@
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
       allowLocationSimulation = "YES">
-      <BuildableProductRunnable>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "070B66BC18BA9BC5002C7F6C"
-            BuildableName = "WellCached.app"
-            BlueprintName = "WellCached"
-            ReferencedContainer = "container:WellCached Tests.xcodeproj">
-         </BuildableReference>
-      </BuildableProductRunnable>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -82,7 +64,7 @@
             BlueprintIdentifier = "070B66BC18BA9BC5002C7F6C"
             BuildableName = "WellCached.app"
             BlueprintName = "WellCached"
-            ReferencedContainer = "container:WellCached Tests.xcodeproj">
+            ReferencedContainer = "container:Tests/WellCached Tests.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

@@ -1,6 +1,6 @@
-desc "Runs the specs [EMPTY]"
-task :spec do
-  # Provide your own implementation
+desc "Runs the tests using xcodebuild and xcpretty"
+task :test do
+  sh("xcodebuild -workspace WellCached.xcworkspace -scheme 'WellCachedTests' -sdk 'iphonesimulator' test | xcpretty -c ; exit ${PIPESTATUS[0]}") rescue nil
 end
 
 task :version do

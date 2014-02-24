@@ -136,11 +136,6 @@
 			attributes = {
 				CLASSPREFIX = ELA;
 				LastUpgradeCheck = 0510;
-				TargetAttributes = {
-					070B66D718BA9BC5002C7F6C = {
-						TestTargetID = 070B66BC18BA9BC5002C7F6C;
-					};
-				};
 			};
 			buildConfigurationList = 070B66B818BA9BC5002C7F6C /* Build configuration list for PBXProject "WellCached Tests" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -313,7 +308,6 @@
 				);
 				INFOPLIST_FILE = "WellCachedTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
 			name = Debug;
@@ -331,7 +325,6 @@
 				GCC_PREFIX_HEADER = "WellCached-Prefix.pch";
 				INFOPLIST_FILE = "WellCachedTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
 			name = Release;
