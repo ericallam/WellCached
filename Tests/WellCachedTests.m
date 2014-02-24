@@ -17,44 +17,44 @@
 
 - (void)testActsLikeNormalCache
 {
-    ELAWellCached *wellCached = [ELAWellCached new];
+    ELAWellCached *cache = [ELAWellCached new];
     
-    XCTAssertNil([wellCached objectForKey:@"foo"]);
+    XCTAssertNil([cache objectForKey:@"foo"]);
     
-    [wellCached setObject:@"bar" forKey:@"foo"];
+    [cache setObject:@"bar" forKey:@"foo"];
     
-    XCTAssertEqualObjects([wellCached objectForKey:@"foo"], @"bar");
+    XCTAssertEqualObjects([cache objectForKey:@"foo"], @"bar");
 }
 
 - (void)testKeyedSubscripting
 {
-    ELAWellCached *wellCached = [ELAWellCached new];
+    ELAWellCached *cache = [ELAWellCached new];
     
-    XCTAssertNil(wellCached[@"foo"]);
+    XCTAssertNil(cache[@"foo"]);
     
-    wellCached[@"foo"] = @"bar";
+    cache[@"foo"] = @"bar";
     
-    XCTAssertEqualObjects(wellCached[@"foo"], @"bar");
+    XCTAssertEqualObjects(cache[@"foo"], @"bar");
 }
 
 - (void)testInitializingWithDefaultCacheExpiringTime
 {
-    ELAWellCached *wellCached = [ELAWellCached cacheWithDefaultExpiringDuration:1]; // 1 second
+    ELAWellCached *cache = [ELAWellCached cacheWithDefaultExpiringDuration:1]; // 1 second
     
-    wellCached[@"foo"] = @"bar";
+    cache[@"foo"] = @"bar";
     
-    XCTAssertEqualObjects(wellCached[@"foo"], @"bar");
+    XCTAssertEqualObjects(cache[@"foo"], @"bar");
     
     sleep(2); // sleep for 2 seconds
     
-    XCTAssertNil(wellCached[@"foo"], @"The 'foo' cache item did not automatically expire after the default duration");
+    XCTAssertNil(cache[@"foo"], @"The 'foo' cache item did not automatically expire after the default duration");
 }
 
 - (void)testFetch
 {
-    ELAWellCached *wellCached = [ELAWellCached new];
+    ELAWellCached *cache = [ELAWellCached new];
     
-    id result = [wellCached fetch:@"foo" generateOnMiss:^id{
+    id result = [cache fetch:@"foo" generateOnMiss:^id{
         return @"bar";
     }];
     
@@ -62,7 +62,7 @@
     
     __block BOOL handlerCalled = NO;
     
-    [wellCached fetch:@"foo" generateOnMiss:^id{
+    [cache fetch:@"foo" generateOnMiss:^id{
         handlerCalled = YES;
         return nil;
     }];
@@ -70,9 +70,42 @@
     XCTAssertFalse(handlerCalled, @"The handler should not be called because there is already a cache-item for 'foo'");
 }
 
+- (void)testFetchWithExpiration
+{
+    ELAWellCached *cache = [ELAWellCached cacheWithDefaultExpiringDuration:1]; // 1 second
+    
+    cache[@"foo"] = @"bar";
+    
+    sleep(1.1);
+    
+    __block BOOL handlerCalled = NO;
+    
+    id result = [cache fetch:@"foo" generateOnMiss:^id{
+        handlerCalled = YES;
+        return @"baz";
+    }];
+    
+    XCTAssertTrue(handlerCalled);
+    
+    XCTAssertEqualObjects(result, @"baz");
+}
+
+- (void)testFetchWithCustomExpiration
+{
+    ELAWellCached *cache = [ELAWellCached cacheWithDefaultExpiringDuration:60]; // 1 minute
+    
+    [cache fetch:@"foo" generateOnMiss:^id{
+        return @"bar";
+    } expirationInterval:1];
+    
+    sleep(1.1);
+    
+    XCTAssertNil(cache[@"foo"]);
+}
+
 - (void)testMultipleThreadsCallingFetchOnExpiredItem
 {
-    ELAWellCached *wellCached = [ELAWellCached cacheWithDefaultExpiringDuration:1]; // 1 second
+    ELAWellCached *cache = [ELAWellCached cacheWithDefaultExpiringDuration:1]; // 1 second
     
     NSOperationQueue *queue = [NSOperationQueue new];
     queue.maxConcurrentOperationCount = 4;
@@ -81,8 +114,8 @@
     __block int handlerCalls = 0;
     
     [queue addOperationWithBlock:^{
-        [wellCached fetch:@"foo" generateOnMiss:^id{
-            @synchronized(wellCached){
+        [cache fetch:@"foo" generateOnMiss:^id{
+            @synchronized(cache){
                 handlerCalls++;
             }
             return @"baz";
@@ -90,8 +123,8 @@
     }];
     
     [queue addOperationWithBlock:^{
-        [wellCached fetch:@"foo" generateOnMiss:^id{
-            @synchronized(wellCached){
+        [cache fetch:@"foo" generateOnMiss:^id{
+            @synchronized(cache){
                 handlerCalls++;
             }
             
@@ -100,8 +133,8 @@
     }];
     
     [queue addOperationWithBlock:^{
-        [wellCached fetch:@"foo" generateOnMiss:^id{
-            @synchronized(wellCached){
+        [cache fetch:@"foo" generateOnMiss:^id{
+            @synchronized(cache){
                 handlerCalls++;
             }
             
@@ -163,6 +196,23 @@
     XCTAssertFalse(handlerCalled);
     
     XCTAssertEqualObjects(@"baz", result);
+}
+
+- (void)testAsynchronousFetchHandlerWithCustomExpirationInterval
+{
+    ELAWellCached *cache = [ELAWellCached cacheWithDefaultExpiringDuration:60]; // 1 minute
+    
+    __block id result;
+    
+    [cache fetch:@"foo" generateOnMissAsync:^(ELAResultCallback callback) {
+        callback(@"bar");
+    } result:^(id callResult) {
+        result = callResult;
+    } expirationInterval:1];
+    
+    sleep(1.1);
+    
+    XCTAssertNil(cache[@"foo"]);
 }
 
 @end

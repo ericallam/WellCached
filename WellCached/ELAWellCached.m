@@ -45,7 +45,12 @@
 
 - (void)setObject:(id)obj forKey:(id)key
 {
-    self.expiringDates[key] = [NSDate dateWithTimeIntervalSinceNow:self.expireDuration];
+    [self setObject:obj forKey:key expirationInterval:self.expireDuration];
+}
+
+- (void)setObject:(id)obj forKey:(id)key expirationInterval:(NSTimeInterval)expirationDuration
+{
+    self.expiringDates[key] = [NSDate dateWithTimeIntervalSinceNow:expirationDuration];
     
     [super setObject:obj forKey:key];
 }
@@ -53,6 +58,11 @@
 #pragma mark - New Api
 
 - (id)fetch:(id)key generateOnMiss:(id (^)(void))handler;
+{
+    return [self fetch:key generateOnMiss:handler expirationInterval:self.expireDuration];
+}
+
+- (id)fetch:(id)key generateOnMiss:(id (^)(void))handler expirationInterval:(NSTimeInterval)interval;
 {
     id result;
     
@@ -65,13 +75,16 @@
         }
         
         result = handler();
-        self[key] = result;
+        [self setObject:result forKey:key expirationInterval:interval];
     }
     
     return result;
 }
 
-- (void)fetch:(id)key generateOnMissAsync:(void (^)(ELAResultCallback))handler result:(ELAFetchCallback)fetchCallback;
+- (void)fetch:(id)key
+generateOnMissAsync:(void (^)(ELAResultCallback))handler
+       result:(ELAFetchCallback)fetchCallback
+expirationInterval:(NSTimeInterval)interval;
 {
     @synchronized(self)
     {
@@ -81,12 +94,16 @@
             fetchCallback(result);
         }else{
             handler(^(id generatedResult){
-                self[key] = generatedResult;
+                [self setObject:generatedResult forKey:key expirationInterval:interval];
                 fetchCallback(generatedResult);
             });
         }
     }
-    
+}
+
+- (void)fetch:(id)key generateOnMissAsync:(void (^)(ELAResultCallback))handler result:(ELAFetchCallback)fetchCallback;
+{
+    [self fetch:key generateOnMissAsync:handler result:fetchCallback expirationInterval:self.expireDuration];
 }
 
 #pragma mark - Keyed Subscripting
