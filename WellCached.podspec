@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
   s.license          = 'MIT'
   s.author           = { "Eric Allam" => "eallam@icloud.com" }
   s.source           = { :git => "http://github.com/ericallam/WellCached.git", :tag => s.version.to_s }
-  s.social_media_url = 'https://twitter.com/eallam'
+  # s.social_media_url = 'https://twitter.com/eallam'
 
   # s.platform     = :ios, '5.0'
   # s.ios.deployment_target = '5.0'
