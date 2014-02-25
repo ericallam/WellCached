@@ -5,6 +5,7 @@ WellCached is a NSCache subclass that provides keyed subscripting, time-based ke
 [![Version](http://cocoapod-badges.herokuapp.com/v/WellCached/badge.png)](http://cocoadocs.org/docsets/WellCached)
 [![Platform](http://cocoapod-badges.herokuapp.com/p/WellCached/badge.png)](http://cocoadocs.org/docsets/WellCached)
 
+
 ## Usage
 
 WellCached includes a single class `ELAWellCached` that can be used exactly like `NSCache`:
