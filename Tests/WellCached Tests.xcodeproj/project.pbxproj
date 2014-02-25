@@ -10,7 +10,7 @@
 		070B66DA18BA9BC5002C7F6C /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 070B66D918BA9BC5002C7F6C /* XCTest.framework */; };
 		070B66DB18BA9BC5002C7F6C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 070B66C018BA9BC5002C7F6C /* Foundation.framework */; };
 		070B66DC18BA9BC5002C7F6C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 070B66C418BA9BC5002C7F6C /* UIKit.framework */; };
-		070B66E618BA9BC5002C7F6C /* WellCachedTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 070B66E518BA9BC5002C7F6C /* WellCachedTests.m */; };
+		0797539718BCA5AB002693EF /* WellCachedTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 070B66E518BA9BC5002C7F6C /* WellCachedTests.m */; };
 		5B0733EB6C3F4FC09412EA03 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E70AD3A1E94D427A88198F6D /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -34,7 +34,7 @@
 		070B66D918BA9BC5002C7F6C /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		070B66E118BA9BC5002C7F6C /* WellCachedTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "WellCachedTests-Info.plist"; sourceTree = "<group>"; };
 		070B66E318BA9BC5002C7F6C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		070B66E518BA9BC5002C7F6C /* WellCachedTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = WellCachedTests.m; path = /Users/eric/code/Pods/WellCached/Tests/WellCachedTests.m; sourceTree = "<absolute>"; };
+		070B66E518BA9BC5002C7F6C /* WellCachedTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WellCachedTests.m; sourceTree = SOURCE_ROOT; };
 		070B66EF18BA9F89002C7F6C /* libPods-WellCached.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-WellCached.a"; path = "Pods/build/Debug-iphoneos/libPods-WellCached.a"; sourceTree = "<group>"; };
 		192FDB9F04414B18A095DCA2 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		E70AD3A1E94D427A88198F6D /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -93,8 +93,7 @@
 				070B66E018BA9BC5002C7F6C /* Supporting Files */,
 			);
 			name = Tests;
-			path = /Users/eric/code/Pods/WellCached/Tests;
-			sourceTree = "<absolute>";
+			sourceTree = "<group>";
 		};
 		070B66E018BA9BC5002C7F6C /* Supporting Files */ = {
 			isa = PBXGroup;
@@ -202,7 +201,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				070B66E618BA9BC5002C7F6C /* WellCachedTests.m in Sources */,
+				0797539718BCA5AB002693EF /* WellCachedTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

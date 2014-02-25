@@ -1,6 +1,6 @@
 desc "Runs the tests using xcodebuild and xcpretty"
 task :test do
-  sh("xcodebuild -workspace WellCached.xcworkspace -scheme 'WellCachedTests' -sdk 'iphonesimulator' test | xcpretty -c ; exit ${PIPESTATUS[0]}") rescue nil
+  sh("xcodebuild -workspace WellCached.xcworkspace -scheme 'WellCachedTests' -sdk 'iphonesimulator' test | xcpretty -c; test ${PIPESTATUS[0]} -eq 0") rescue nil
 end
 
 task :version do
