@@ -79,7 +79,7 @@
     
     cache[@"foo"] = @"bar";
     
-    sleep(1.1);
+    sleep(2);
     
     __block BOOL handlerCalled = NO;
     
@@ -101,7 +101,7 @@
         return @"bar";
     } expirationInterval:1];
     
-    sleep(1.1);
+    sleep(2);
     
     XCTAssertNil(cache[@"foo"]);
 }
@@ -213,7 +213,7 @@
         result = callResult;
     } expirationInterval:1];
     
-    sleep(1.1);
+    sleep(2);
     
     XCTAssertNil(cache[@"foo"]);
 }
