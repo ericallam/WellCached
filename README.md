@@ -2,8 +2,6 @@
 
 WellCached is a NSCache subclass that provides keyed subscripting, time-based key expiration, and a Rails-like `fetch` API that works with data from an asynchronous source.
 
-[![Version](http://cocoapod-badges.herokuapp.com/v/WellCached/badge.png)](http://cocoadocs.org/docsets/WellCached)
-[![Platform](http://cocoapod-badges.herokuapp.com/p/WellCached/badge.png)](http://cocoadocs.org/docsets/WellCached)
 [![Build Status](https://travis-ci.org/ericallam/WellCached.png?branch=master)](https://travis-ci.org/ericallam/WellCached)
 
 
