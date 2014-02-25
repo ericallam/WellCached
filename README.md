@@ -120,7 +120,7 @@ Both the synchronous and asynchronous `fetch` methods have variants that allow y
 
 ## Tests
 
-To run the tests; clone the repo, and run `rake test` from the root directory or open the "WellCache.xcworkspace" and run the Test target using `⌘U`
+To run the tests; clone the repo, install [xcpretty](https://github.com/supermarin/xcpretty), and run `rake test` from the root directory or open the "WellCache.xcworkspace" and run the Test target using `⌘U`
 
 ## Example
 
@@ -128,7 +128,16 @@ Most of the time, [NSURLCache](http://nshipster.com/nsurlcache/) is all you'll n
 
 So the example project in `Examples/WalkingDirections` makes use of `WellCached` to fetch and store the result of walking directions for each location in the table view.
 
-**TODO** Build example and insert GIF here
+
+### Without WellCached:
+
+<img src='http://i.imgur.com/qKs0uk2.gif' width="350px" />
+
+### With WellCached:
+
+<img src='http://i.imgur.com/igkGSi9.gif' width="350px" />
+
+Check out `MasterViewController.m` to see how `WellCached` is used.
 
 ## Requirements
 

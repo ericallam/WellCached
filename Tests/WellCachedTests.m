@@ -13,6 +13,9 @@
 
 @end
 
+// TODO:
+// - what happens if the generateOnMissAsync callback is passed nil?
+
 @implementation WellCachedTests
 
 - (void)testActsLikeNormalCache
