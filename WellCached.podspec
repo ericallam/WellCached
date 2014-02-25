@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "WellCached"
-  s.version          = "0.1.0"
+  s.version          = "0.1.1"
   s.summary          = "An expiring, thread-safe caching library based on NSCache"
   s.description      = <<-DESC
                         WellCached provides a simple NSDictionary-like interface for caching, allowing
