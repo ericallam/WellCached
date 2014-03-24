@@ -9,10 +9,26 @@
 /* Begin PBXBuildFile section */
 		070B66DA18BA9BC5002C7F6C /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 070B66D918BA9BC5002C7F6C /* XCTest.framework */; };
 		070B66DB18BA9BC5002C7F6C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 070B66C018BA9BC5002C7F6C /* Foundation.framework */; };
-		070B66DC18BA9BC5002C7F6C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 070B66C418BA9BC5002C7F6C /* UIKit.framework */; };
 		0797539718BCA5AB002693EF /* WellCachedTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 070B66E518BA9BC5002C7F6C /* WellCachedTests.m */; };
 		5B0733EB6C3F4FC09412EA03 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E70AD3A1E94D427A88198F6D /* libPods.a */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		07E2D7E418E0717900DA6528 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 07E2D7DF18E0717800DA6528 /* WellCachedTestHost.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 07E2D7AD18E0717800DA6528;
+			remoteInfo = WellCachedTestHost;
+		};
+		07E2D7E818E0719300DA6528 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 07E2D7DF18E0717800DA6528 /* WellCachedTestHost.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 07E2D7AC18E0717800DA6528;
+			remoteInfo = WellCachedTestHost;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		07112B2118BAA4BB00F4E05F /* CopyFiles */ = {
@@ -36,6 +52,7 @@
 		070B66E318BA9BC5002C7F6C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		070B66E518BA9BC5002C7F6C /* WellCachedTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WellCachedTests.m; sourceTree = SOURCE_ROOT; };
 		070B66EF18BA9F89002C7F6C /* libPods-WellCached.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-WellCached.a"; path = "Pods/build/Debug-iphoneos/libPods-WellCached.a"; sourceTree = "<group>"; };
+		07E2D7DF18E0717800DA6528 /* WellCachedTestHost.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = WellCachedTestHost.xcodeproj; path = WellCachedTestHost/WellCachedTestHost.xcodeproj; sourceTree = "<group>"; };
 		192FDB9F04414B18A095DCA2 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		E70AD3A1E94D427A88198F6D /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -46,7 +63,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				070B66DA18BA9BC5002C7F6C /* XCTest.framework in Frameworks */,
-				070B66DC18BA9BC5002C7F6C /* UIKit.framework in Frameworks */,
 				070B66DB18BA9BC5002C7F6C /* Foundation.framework in Frameworks */,
 				5B0733EB6C3F4FC09412EA03 /* libPods.a in Frameworks */,
 			);
@@ -100,8 +116,17 @@
 			children = (
 				070B66E118BA9BC5002C7F6C /* WellCachedTests-Info.plist */,
 				070B66E218BA9BC5002C7F6C /* InfoPlist.strings */,
+				07E2D7DF18E0717800DA6528 /* WellCachedTestHost.xcodeproj */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		07E2D7E018E0717800DA6528 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				07E2D7E518E0717900DA6528 /* WellCachedTestHost.app */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -121,6 +146,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				07E2D7E918E0719300DA6528 /* PBXTargetDependency */,
 			);
 			name = WellCachedTests;
 			productName = WellCachedTests;
@@ -146,12 +172,28 @@
 			mainGroup = 070B66B418BA9BC5002C7F6C;
 			productRefGroup = 070B66BE18BA9BC5002C7F6C /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 07E2D7E018E0717800DA6528 /* Products */;
+					ProjectRef = 07E2D7DF18E0717800DA6528 /* WellCachedTestHost.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				070B66D718BA9BC5002C7F6C /* WellCachedTests */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		07E2D7E518E0717900DA6528 /* WellCachedTestHost.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = WellCachedTestHost.app;
+			remoteRef = 07E2D7E418E0717900DA6528 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		070B66D618BA9BC5002C7F6C /* Resources */ = {
@@ -206,6 +248,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		07E2D7E918E0719300DA6528 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = WellCachedTestHost;
+			targetProxy = 07E2D7E818E0719300DA6528 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		070B66E218BA9BC5002C7F6C /* InfoPlist.strings */ = {
@@ -294,6 +344,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 192FDB9F04414B18A095DCA2 /* Pods.xcconfig */;
 			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/WellCachedTestHost.app/WellCachedTestHost";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -306,7 +357,10 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = "WellCachedTests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				MACH_O_TYPE = mh_bundle;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
 			name = Debug;
@@ -315,6 +369,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 192FDB9F04414B18A095DCA2 /* Pods.xcconfig */;
 			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/WellCachedTestHost.app/WellCachedTestHost";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -323,7 +378,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "WellCached-Prefix.pch";
 				INFOPLIST_FILE = "WellCachedTests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				MACH_O_TYPE = mh_bundle;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
 			name = Release;
