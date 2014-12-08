@@ -162,7 +162,7 @@ I intend to keep improving the thread-safetyness of this class and expand it's U
 
 ## Author
 
-Eric Allam, eallam@gmail.com
+Eric Allam, eallam@icloud.com
 
 ## License
 
